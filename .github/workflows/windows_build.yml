@@ -36,7 +36,7 @@ jobs:
           python -m pip list
       - name: Prepare installer
         run: |
-          $env:PYGAME_HIDE_SUPPORT_PROMPT=hide
+          $env:PYGAME_HIDE_SUPPORT_PROMPT="hide"
           cd MAVProxy
           copy ..\\windows\\mavproxy.spec
           pyinstaller --clean mavproxy.spec
