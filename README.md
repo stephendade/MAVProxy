@@ -26,3 +26,10 @@ Lead Developers: Andrew Tridgell and Peter Barker
 Windows Maintainer: Stephen Dade
 
 MacOS Maintainer: Rhys Mainwaring
+
+Development
+-----------
+
+To do a new release, the ``bump2version`` python package is required.
+
+Use ``bump2version [major|minor|patch] --allow-dirty`` to do a new release.
