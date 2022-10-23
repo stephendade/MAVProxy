@@ -66,3 +66,8 @@ jobs:
            name: MAVProxyInstaller
            path: windows/Output
            retention-days: 7
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/') && github.ref == 'refs/heads/master'
+        with:
+          files: windows/Output/MAVProxyInstaller.zip
