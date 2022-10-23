@@ -74,3 +74,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: windows/Output/MAVProxyInstaller.zip
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
