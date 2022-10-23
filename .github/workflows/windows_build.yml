@@ -66,8 +66,11 @@ jobs:
            name: MAVProxyInstaller
            path: windows/Output
            retention-days: 7
-      - name: Release
-        uses: softprops/action-gh-release@v1
+      - name: Pre Release
+        uses: "marvinpinto/action-automatic-releases@latest"
         if: github.ref == 'refs/heads/master'
         with:
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
           files: windows/Output/MAVProxyInstaller.zip
